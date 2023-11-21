@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interiola Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="navbar1">
+        <img src="img/logo.svg" class="logo">
+        <ul class="links">
+            <li><a href="#">Home </a></li>
+            <li><a href="#">About Us </a></li>
+            <li><a href="#">Project </a></li>
+            <li><a href="#">Article </a></li>
+            <li><a href="#">FAQ </a></li>
+        </ul>
+        <div class="toggle_btn1">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>  
+
+    <div class="dropdown_menu1">
+        <li><a href="#">Home </a></li>
+        <li><a href="#">About Us </a></li>
+        <li><a href="#">Project </a></li>
+        <li><a href="#">Article </a></li>
+        <li><a href="#">FAQ </a></li>
+    </div>
+    </div> 
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+    
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+    
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars' 
+            }
+
+            const toggleBtn1 = document.querySelector('.toggle_btn1')
+            const toggleBtnIcon1 = document.querySelector('.toggle_btn1 i')
+            const dropDownMenu1 = document.querySelector('.dropdown_menu1')
+    
+            toggleBtn1.onclick = function () {
+                dropDownMenu1.classList.toggle('open')
+                const isOpen = dropDownMenu1.classList.contains('open')
+    
+                toggleBtnIcon1.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars' 
+            }
+    
+        $(".step").click( function() {
+        $(this).addClass("active").prevAll().addClass("active");
+        $(this).nextAll().removeClass("active");
+    });
+    
+    $(".step01").click( function() {
+        $("#line-progress").css("width", "3%");
+        $(".discovery").addClass("active").siblings().removeClass("active");
+    });
+    
+    $(".step02").click( function() {
+        $("#line-progress").css("width", "25%");
+        $(".strategy").addClass("active").siblings().removeClass("active");
+    });
+    
+    $(".step03").click( function() {
+        $("#line-progress").css("width", "50%");
+        $(".creative").addClass("active").siblings().removeClass("active");
+    });
+    
+    $(".step04").click( function() {
+        $("#line-progress").css("width", "75%");
+        $(".production").addClass("active").siblings().removeClass("active");
+    });
+    
+    $(".step05").click( function() {
+        $("#line-progress").css("width", "100%");
+        $(".analysis").addClass("active").siblings().removeClass("active");
+    });
+        </script>
+</html> 
